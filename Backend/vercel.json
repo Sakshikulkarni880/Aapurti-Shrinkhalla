@@ -19,21 +19,11 @@
     }
   ],
   "routes": [
-    {
-      "src": "/api/farmers/(.*)",
-      "dest": "api/farmers/$1"
-    },
-    {
-      "src": "/api/users/(.*)",
-      "dest": "api/users/$1"
-    },
-    {
-      "src": "/api/posts/(.*)",
-      "dest": "api/posts/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/$1"
-    }
+    { "src": "/api/farmers", "dest": "/api/farmers.js" },
+    { "src": "/api/farmers/:id", "dest": "/api/farmers.js" },
+    { "src": "/api/users", "dest": "/api/users.js" },
+    { "src": "/api/users/:id", "dest": "/api/users.js" },
+    { "src": "/api/posts", "dest": "/api/posts.js" },
+    { "src": "/api/posts/:id", "dest": "/api/posts.js" }
   ]
 }
